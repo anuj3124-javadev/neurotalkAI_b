@@ -41,6 +41,8 @@ app.use('/api/', limiter);
 // Body parser
 app.use(express.json());
 
+app.set('trust proxy', 1);
+
 // Routes
 app.use('/api/auth', authRoutes);
 app.use('/api/chats', chatRoutes);

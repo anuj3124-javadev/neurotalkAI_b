@@ -13,7 +13,10 @@ const app = express();
 // Security middleware
 app.use(helmet());
 app.use(cors({
-    origin: 'http://localhost:3000', // Frontend URL
+    origin: [
+        'http://localhost:3000',
+        'https://neuro-talk-ai.vercel.app/'  // your live frontend
+    ],
     credentials: true
 }));
 
